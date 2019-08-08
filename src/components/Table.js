@@ -6,9 +6,11 @@ import {
   TableHeaderColumn,
   TableRow,
   TableRowColumn
-} from "material-ui/Table";
-import TrashIcon from "material-ui/svg-icons/action/delete";
-import TextField from "material-ui/TextField";
+} from 'material-ui/Table';
+import TrashIcon from 'material-ui/svg-icons/action/delete';
+import TextField from 'material-ui/TextField';
+
+//Create list table
 
 const row = (
   x,
@@ -16,7 +18,7 @@ const row = (
   header,
   handleRemove,
   editIdx,
-  handleChange,
+  handleChange
 ) => {
   const currentlyEditing = editIdx === i;
   return (
@@ -48,7 +50,7 @@ export default ({
   header,
   handleRemove,
   editIdx,
-  handleChange,
+  handleChange
 }) => (
   <Table>
     <TableHeader>
@@ -70,7 +72,7 @@ export default ({
           header,
           handleRemove,
           editIdx,
-          handleChange,
+          handleChange
         )
       )}
     </TableBody>

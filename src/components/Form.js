@@ -2,6 +2,8 @@ import React from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
+//Add tasks
+
 export default class Form extends React.Component {
   state = {
     task: "",
@@ -33,6 +35,7 @@ export default class Form extends React.Component {
     return isError;
   };
 
+  //Button
   onSubmit = e => {
     e.preventDefault();
     const err = this.validate();
@@ -59,7 +62,7 @@ export default class Form extends React.Component {
           floatingLabelFixed
         />
         <br/>
-        <RaisedButton label="Add" onClick={e => this.onSubmit(e)} primary />
+        <RaisedButton label="Add Task" onClick={e => this.onSubmit(e)} primary />
       </form>
     );
   }

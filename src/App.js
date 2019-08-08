@@ -7,16 +7,23 @@ import './App.css';
 
 class App extends Component {
   state = {
-    data: []
+    data: [],
+  };
+
+  handleRemove = i => {
+    this.setState(state => ({
+      data: state.data.filter((row, j) => j !== i)
+    }));
   };
 
   render() {
     return (
       <MuiThemeProvider>
         <div align = "center">
-          <TitleBar/>
-          <Form
 
+          <TitleBar/>
+
+          <Form
             onSubmit={submission =>
               this.setState({
                 data: [...this.state.data, submission]
@@ -24,6 +31,8 @@ class App extends Component {
           />
 
           <Table
+            handleRemove={this.handleRemove}
+            editIdx={this.state.editIdx}
             data={this.state.data}
             header={[
               {

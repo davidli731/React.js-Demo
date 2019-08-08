@@ -20,6 +20,11 @@ export default class Form extends React.Component {
       taskError: ""
     };
 
+    if (this.state.task.length == 0) {
+      isError = true;
+      errors.taskError = "No task entered";
+    }
+
     this.setState({
       ...this.state,
       ...errors

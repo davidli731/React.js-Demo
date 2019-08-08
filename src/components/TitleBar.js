@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import ToolBar from '@material-ui/core/ToolBar';
 import Typography from '@material-ui/core/Typography';
 
-const NavBar = () => {
+const TitleBar = () => {
   return(
     <div>
       <AppBar position = "static">
@@ -16,4 +16,4 @@ const NavBar = () => {
     </div>
   )
 }
-export default NavBar;
+export default TitleBar;
